@@ -6,6 +6,9 @@ import java.util.stream.Collectors;
 
 import seedu.address.model.AddressBook;
 import seedu.address.model.ReadOnlyAddressBook;
+import seedu.address.model.module.CurrentModule;
+import seedu.address.model.module.PlannedModule;
+import seedu.address.model.module.PreviousModule;
 import seedu.address.model.person.Address;
 import seedu.address.model.person.Email;
 import seedu.address.model.person.Name;
@@ -54,6 +57,33 @@ public class SampleDataUtil {
     public static Set<Tag> getTagSet(String... strings) {
         return Arrays.stream(strings)
                 .map(Tag::new)
+                .collect(Collectors.toSet());
+    }
+
+    /**
+     * Returns a current module set containing the list of strings given.
+     */
+    public static Set<CurrentModule> getCurrentModuleSet(String... strings) {
+        return Arrays.stream(strings)
+                .map(CurrentModule::new)
+                .collect(Collectors.toSet());
+    }
+
+    /**
+     * Returns a planned module set containing the list of strings given.
+     */
+    public static Set<PlannedModule> getPlannedModuleSet(String... strings) {
+        return Arrays.stream(strings)
+                .map(PlannedModule::new)
+                .collect(Collectors.toSet());
+    }
+
+    /**
+     * Returns a tag set containing the list of strings given.
+     */
+    public static Set<PreviousModule> getPreviousModuleSet(String... strings) {
+        return Arrays.stream(strings)
+                .map(PreviousModule::new)
                 .collect(Collectors.toSet());
     }
 

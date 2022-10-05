@@ -3,6 +3,9 @@ package seedu.address.testutil;
 import java.util.HashSet;
 import java.util.Set;
 
+import seedu.address.model.module.CurrentModule;
+import seedu.address.model.module.PlannedModule;
+import seedu.address.model.module.PreviousModule;
 import seedu.address.model.person.Address;
 import seedu.address.model.person.Email;
 import seedu.address.model.person.Name;
@@ -26,6 +29,9 @@ public class PersonBuilder {
     private Email email;
     private Address address;
     private Set<Tag> tags;
+    private Set<CurrentModule> currentModules;
+    private Set<PlannedModule> plannedModules;
+    private Set<PreviousModule> previousModules;
 
     /**
      * Creates a {@code PersonBuilder} with the default details.
@@ -36,6 +42,9 @@ public class PersonBuilder {
         email = new Email(DEFAULT_EMAIL);
         address = new Address(DEFAULT_ADDRESS);
         tags = new HashSet<>();
+        currentModules = new HashSet<>();
+        plannedModules = new HashSet<>();
+        previousModules = new HashSet<>();
     }
 
     /**
@@ -62,6 +71,30 @@ public class PersonBuilder {
      */
     public PersonBuilder withTags(String ... tags) {
         this.tags = SampleDataUtil.getTagSet(tags);
+        return this;
+    }
+
+    /**
+     * Parses the {@code current modules} into a {@code Set<CurrentModule>} and set it to the {@code Person} that we are building.
+     */
+    public PersonBuilder withCurrentModules(String ... currentModules) {
+        this.currentModules = SampleDataUtil.getCurrentModuleSet(currentModules);
+        return this;
+    }
+
+    /**
+     * Parses the {@code planned modules} into a {@code Set<PlannedModule>} and set it to the {@code Person} that we are building.
+     */
+    public PersonBuilder withPlannedModules(String ... plannedModules) {
+        this.plannedModules = SampleDataUtil.getPlannedModuleSet(plannedModules);
+        return this;
+    }
+
+    /**
+     * Parses the {@code previous modules} into a {@code Set<PreviousModule>} and set it to the {@code Person} that we are building.
+     */
+    public PersonBuilder withPreviousModules(String ... previousModules) {
+        this.previousModules = SampleDataUtil.getPreviousModuleSet(previousModules);
         return this;
     }
 
