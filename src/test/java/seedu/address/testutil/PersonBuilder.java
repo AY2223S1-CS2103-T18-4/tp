@@ -75,7 +75,8 @@ public class PersonBuilder {
     }
 
     /**
-     * Parses the {@code current modules} into a {@code Set<CurrentModule>} and set it to the {@code Person} that we are building.
+     * Parses the {@code current modules} into a {@code Set<CurrentModule>}
+     * and set it to the {@code Person} that we are building.
      */
     public PersonBuilder withCurrentModules(String ... currentModules) {
         this.currentModules = SampleDataUtil.getCurrentModuleSet(currentModules);
@@ -83,7 +84,8 @@ public class PersonBuilder {
     }
 
     /**
-     * Parses the {@code planned modules} into a {@code Set<PlannedModule>} and set it to the {@code Person} that we are building.
+     * Parses the {@code planned modules} into a {@code Set<PlannedModule>}
+     * and set it to the {@code Person} that we are building.
      */
     public PersonBuilder withPlannedModules(String ... plannedModules) {
         this.plannedModules = SampleDataUtil.getPlannedModuleSet(plannedModules);
@@ -91,7 +93,8 @@ public class PersonBuilder {
     }
 
     /**
-     * Parses the {@code previous modules} into a {@code Set<PreviousModule>} and set it to the {@code Person} that we are building.
+     * Parses the {@code previous modules} into a {@code Set<PreviousModule>}
+     * and set it to the {@code Person} that we are building.
      */
     public PersonBuilder withPreviousModules(String ... previousModules) {
         this.previousModules = SampleDataUtil.getPreviousModuleSet(previousModules);

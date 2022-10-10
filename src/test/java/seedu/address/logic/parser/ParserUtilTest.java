@@ -230,7 +230,8 @@ public class ParserUtilTest {
 
     @Test
     public void parseCurrentModules_collectionWithInvalidCurrentModules_throwsParseException() {
-        assertThrows(ParseException.class, () -> ParserUtil.parseCurrentModules(Arrays.asList(VALID_MODULE_1, INVALID_MODULE)));
+        assertThrows(ParseException.class, () -> ParserUtil.parseCurrentModules(
+                Arrays.asList(VALID_MODULE_1, INVALID_MODULE)));
     }
 
     @Test
@@ -240,8 +241,10 @@ public class ParserUtilTest {
 
     @Test
     public void parseCurrentModules_collectionWithValidCurrentModules_returnsCurrentModulesSet() throws Exception {
-        Set<CurrentModule> actualCurrentModuleSet = ParserUtil.parseCurrentModules(Arrays.asList(VALID_MODULE_1, VALID_MODULE_2));
-        Set<CurrentModule> expectedCurrentModuleSet = new HashSet<CurrentModule>(Arrays.asList(new CurrentModule(VALID_MODULE_1), new CurrentModule(VALID_MODULE_2)));
+        Set<CurrentModule> actualCurrentModuleSet = ParserUtil.parseCurrentModules(
+                Arrays.asList(VALID_MODULE_1, VALID_MODULE_2));
+        Set<CurrentModule> expectedCurrentModuleSet = new HashSet<CurrentModule>(
+                Arrays.asList(new CurrentModule(VALID_MODULE_1), new CurrentModule(VALID_MODULE_2)));
 
         assertEquals(expectedCurrentModuleSet, actualCurrentModuleSet);
     }
@@ -276,7 +279,8 @@ public class ParserUtilTest {
 
     @Test
     public void parsePreviousModules_collectionWithInvalidPreviousModules_throwsParseException() {
-        assertThrows(ParseException.class, () -> ParserUtil.parsePreviousModules(Arrays.asList(VALID_MODULE_1, INVALID_MODULE)));
+        assertThrows(ParseException.class, () -> ParserUtil.parsePreviousModules(
+                Arrays.asList(VALID_MODULE_1, INVALID_MODULE)));
     }
 
     @Test
@@ -286,8 +290,10 @@ public class ParserUtilTest {
 
     @Test
     public void parsePreviousModules_collectionWithValidPreviousModules_returnsPreviousModulesSet() throws Exception {
-        Set<PreviousModule> actualPreviousModuleSet = ParserUtil.parsePreviousModules(Arrays.asList(VALID_MODULE_1, VALID_MODULE_2));
-        Set<PreviousModule> expectedPreviousModuleSet = new HashSet<PreviousModule>(Arrays.asList(new PreviousModule(VALID_MODULE_1), new PreviousModule(VALID_MODULE_2)));
+        Set<PreviousModule> actualPreviousModuleSet = ParserUtil.parsePreviousModules(
+                Arrays.asList(VALID_MODULE_1, VALID_MODULE_2));
+        Set<PreviousModule> expectedPreviousModuleSet = new HashSet<PreviousModule>(
+                Arrays.asList(new PreviousModule(VALID_MODULE_1), new PreviousModule(VALID_MODULE_2)));
 
         assertEquals(expectedPreviousModuleSet, actualPreviousModuleSet);
     }
@@ -322,7 +328,8 @@ public class ParserUtilTest {
 
     @Test
     public void parsePlannedModules_collectionWithInvalidCurrentModules_throwsParseException() {
-        assertThrows(ParseException.class, () -> ParserUtil.parseCurrentModules(Arrays.asList(VALID_MODULE_1, INVALID_MODULE)));
+        assertThrows(ParseException.class, () -> ParserUtil.parseCurrentModules(
+                Arrays.asList(VALID_MODULE_1, INVALID_MODULE)));
     }
 
     @Test
@@ -332,8 +339,10 @@ public class ParserUtilTest {
 
     @Test
     public void parsePlannedModules_collectionWithValidPlannedModules_returnsPlannedModulesSet() throws Exception {
-        Set<PlannedModule> actualPlannedModuleSet = ParserUtil.parsePlannedModules(Arrays.asList(VALID_MODULE_1, VALID_MODULE_2));
-        Set<PlannedModule> expectedPlannedModuleSet = new HashSet<PlannedModule>(Arrays.asList(new PlannedModule(VALID_MODULE_1), new PlannedModule(VALID_MODULE_2)));
+        Set<PlannedModule> actualPlannedModuleSet = ParserUtil.parsePlannedModules(
+                Arrays.asList(VALID_MODULE_1, VALID_MODULE_2));
+        Set<PlannedModule> expectedPlannedModuleSet = new HashSet<PlannedModule>(
+                Arrays.asList(new PlannedModule(VALID_MODULE_1), new PlannedModule(VALID_MODULE_2)));
 
         assertEquals(expectedPlannedModuleSet, actualPlannedModuleSet);
     }
